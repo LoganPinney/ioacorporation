@@ -108,8 +108,12 @@ h1 {
   font-weight: 560;
 }
 .text-link span { margin-left: 12px; }
-.hero-image { min-height: 690px; position: relative; overflow: hidden; }
-.hero-image img { object-fit: cover; }
+.hero-image {
+  min-height: 690px;
+  position: relative;
+  overflow: hidden;
+  background: #d8d0c2 url("/ioa-architecture-hero.svg") center / cover no-repeat;
+}
 .principles {
   min-height: 70px; padding: 18px 30px; display: flex; align-items: center;
   justify-content: center; gap: 28px; background: #ece7dc; color: var(--copper);

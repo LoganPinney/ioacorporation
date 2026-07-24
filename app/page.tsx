@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ContactForm } from "../components/ContactForm";
 import { Header } from "../components/Header";
 
@@ -85,15 +84,11 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="hero-image">
-            <Image
-              src="/ioa-architecture-hero.jpg"
-              alt="Architectural plans, a glass structural model and drafting instruments"
-              fill
-              priority
-              sizes="(max-width: 900px) 100vw, 50vw"
-            />
-          </div>
+          <div
+            className="hero-image"
+            role="img"
+            aria-label="Architectural plans, a glass structural model and drafting instruments"
+          />
         </section>
 
         <div className="principles" aria-label="IOA operating model">

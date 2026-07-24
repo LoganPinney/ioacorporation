@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     title: "Integrated systems for complex operations | IOA Corporation",
     description:
       "Integrated operational systems for complex enterprise operations.",
-    images: [{ url: "/og.png", width: 1735, height: 908, alt: "IOA Corporation — Architecture for complex operations" }],
+    images: [{ url: "/og-corporate.svg", width: 1200, height: 630, alt: "IOA Corporation — Architecture for complex operations" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Architecture for complex operations | IOA Corporation",
     description:
       "Integrated operational systems for complex enterprise operations.",
-    images: ["/og.png"],
+    images: ["/og-corporate.svg"],
   },
   robots: { index: true, follow: true },
 };
