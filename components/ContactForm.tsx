@@ -9,12 +9,12 @@ export function ContactForm() {
     event.preventDefault();
     const form = event.currentTarget;
     if (!form.reportValidity()) return;
-    setStatus("Secure form delivery is not connected in this first draft. No information was sent or stored. Please use the provisional email shown beside the form.");
+    setStatus("The secure form channel is not yet connected. No information was sent or stored. Please contact us directly by email.");
   }
 
   return (
     <form className="contact-form" onSubmit={handleSubmit} noValidate={false}>
-      <p className="form-disclosure">Draft contact channel: form delivery is not yet configured. This preview does not transmit or store submissions.</p>
+      <p className="form-disclosure">Form delivery is not yet configured. This form does not transmit or retain information.</p>
       <div className="form-row">
         <div className="field"><label htmlFor="name">Name</label><input id="name" name="name" autoComplete="name" required /></div>
         <div className="field"><label htmlFor="organization">Organization</label><input id="organization" name="organization" autoComplete="organization" required /></div>
@@ -29,9 +29,9 @@ export function ContactForm() {
         </div>
       </div>
       <div className="field"><label htmlFor="operation">Operation or problem</label><textarea id="operation" name="operation" required minLength={20} placeholder="Briefly describe the operation, its current constraints, and where coordination is breaking down." /></div>
-      <label className="consent"><input type="checkbox" name="consent" required /><span>I understand this first-draft form is not connected and that no information will be transmitted or retained.</span></label>
+      <label className="consent"><input type="checkbox" name="consent" required /><span>I understand this form is not connected and no information will be transmitted or retained.</span></label>
       <div className="form-actions">
-        <button className="button button-primary" type="submit">Start a discussion <span aria-hidden="true">↗</span></button>
+        <button className="button button-primary" type="submit">Discuss an engagement <span aria-hidden="true">→</span></button>
         <p className="form-status" role="status" aria-live="polite">{status}</p>
       </div>
     </form>

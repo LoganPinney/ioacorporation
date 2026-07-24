@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -7,8 +7,8 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sourceSerif = Source_Serif_4({
+  variable: "--font-source-serif",
   subsets: ["latin"],
 });
 
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: "IOA Corporation",
-    title: "Architecture for complex operations | IOA Corporation",
+    title: "Integrated systems for complex operations | IOA Corporation",
     description:
       "Integrated operational systems for complex enterprise operations.",
     images: [{ url: "/og.png", width: 1735, height: 908, alt: "IOA Corporation — Architecture for complex operations" }],
@@ -38,17 +38,17 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#070b0c",
-  colorScheme: "dark",
+  themeColor: "#f3f0e8",
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-CA">
+    <html lang="en-CA" className={`${geistSans.variable} ${sourceSerif.variable}`}>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
