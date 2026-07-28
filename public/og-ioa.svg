@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">IOA — Integrated Operations Advisory</title>
+  <desc id="desc">A controlled systems diagram for Integrated Operations Advisory</desc>
+  <rect width="1200" height="630" fill="#132e43"/>
+  <g stroke="#9eb3b6" stroke-opacity=".2" stroke-width="1">
+    <path d="M0 90h1200M0 180h1200M0 270h1200M0 360h1200M0 450h1200M0 540h1200M120 0v630M240 0v630M360 0v630M480 0v630M600 0v630M720 0v630M840 0v630M960 0v630M1080 0v630"/>
+  </g>
+  <text x="74" y="84" fill="#c7d5d2" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="5">INTEGRATED OPERATIONS ADVISORY</text>
+  <text x="74" y="270" fill="#f1f3ee" font-family="Georgia, serif" font-size="124" letter-spacing="-5">IOA</text>
+  <text x="82" y="315" fill="#d7a071" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="4">OPERATIONAL CLARITY. DURABLE SYSTEMS.</text>
+  <g fill="#173a50" stroke="#c5d3d0" stroke-opacity=".72" stroke-width="2">
+    <rect x="734" y="164" width="154" height="80"/><rect x="970" y="164" width="154" height="80"/>
+    <rect x="734" y="386" width="154" height="80"/><rect x="970" y="386" width="154" height="80"/>
+  </g>
+  <g stroke="#d7a071" stroke-width="2"><path d="M888 204h78M964 204l-16-12m16 12-16 12M888 426h78M964 426l-16-12m16 12-16 12M811 244v122M1047 244v122"/></g>
+  <rect x="864" y="274" width="160" height="112" fill="#143348" stroke="#d7a071" stroke-width="3"/>
+  <g fill="#e3ebe7" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2"><text x="763" y="208">OPERATIONS</text><text x="998" y="208">INFORMATION</text><text x="766" y="430">GOVERNANCE</text><text x="1007" y="430">DELIVERY</text></g>
+  <text x="908" y="340" fill="#efbd91" font-family="Georgia, serif" font-size="48">IOA</text>
+  <text x="74" y="554" fill="#b8c9c7" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="3">ARCHITECTURE · IMPLEMENTATION · GOVERNANCE</text>
+</svg>

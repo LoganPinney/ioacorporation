@@ -12,7 +12,7 @@ export function SystemDiagram() {
         <span className="diagram-arrow" aria-hidden="true" />
         <div className="diagram-core">
           <span className="core-mark">IOA</span>
-          <strong>Integrated Operations Architecture</strong>
+          <strong>Integrated Operations Advisory</strong>
           <small>Structure · Logic · Control</small>
         </div>
         <span className="diagram-arrow" aria-hidden="true" />

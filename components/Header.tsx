@@ -8,8 +8,8 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <a className="brand" href="#overview" aria-label="IOA Corporation home">
-          IOA <span>Corporation</span>
+        <a className="brand" href="#overview" aria-label="Integrated Operations Advisory home">
+          IOA <span>Integrated Operations Advisory</span>
         </a>
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navItems.map(([label, href]) => <a href={href} key={href}>{label}</a>)}

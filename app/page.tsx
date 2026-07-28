@@ -53,8 +53,8 @@ const outcomes = [
 const organizationData = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Integrated Operations Architecture Inc.",
-  alternateName: "IOA Corporation",
+  name: "Integrated Operations Advisory Inc.",
+  alternateName: "Integrated Operations Advisory",
   url: "https://ioacorporation.com",
   email: "contact@ioacorporation.com",
   areaServed: "Canada",
@@ -70,10 +70,10 @@ export default function Home() {
       <main id="main-content">
         <section className="hero" id="overview" aria-labelledby="hero-heading">
           <div className="hero-copy">
-            <p className="eyebrow">Integrated Operations Architecture</p>
+            <p className="eyebrow">Integrated Operations Advisory</p>
             <h1 id="hero-heading">Integrated systems for complex operations.</h1>
             <p className="hero-intro">
-              IOA Corporation designs the operational architecture, data structures and internal systems that allow complex organizations to coordinate work, control risk and scale with confidence.
+              IOA advises on and delivers the operational architecture, data structures and internal systems that allow complex organizations to coordinate work, control risk and scale with confidence.
             </p>
             <div className="hero-actions" aria-label="Primary actions">
               <a className="button button-primary" href="#contact">
@@ -84,11 +84,18 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div
-            className="hero-image"
-            role="img"
-            aria-label="Architectural plans, a glass structural model and drafting instruments"
-          />
+          <div className="hero-visual" role="img" aria-label="Operational systems model showing connected functions, governed data and controlled outcomes">
+            <div className="visual-topline"><span>IOA / OPERATING MODEL</span><span>01—04</span></div>
+            <div className="visual-grid" aria-hidden="true">
+              <span className="system-node node-a">Operations</span>
+              <span className="system-node node-b">Information</span>
+              <span className="system-node node-c">Governance</span>
+              <span className="system-node node-d">Delivery</span>
+              <span className="system-core">IOA<small>Integrated<br/>advisory</small></span>
+              <i className="connector connector-a" /><i className="connector connector-b" /><i className="connector connector-c" /><i className="connector connector-d" />
+            </div>
+            <div className="visual-footer"><span>CONTROLLED SYSTEMS</span><span>● ACTIVE</span></div>
+          </div>
         </section>
 
         <div className="principles" aria-label="IOA operating model">
@@ -184,7 +191,7 @@ export default function Home() {
           </div>
           <div className="company-copy">
             <p>
-              Integrated Operations Architecture Inc. is a Canadian corporation that designs and implements operational systems for complex organizations.
+              Integrated Operations Advisory Inc. is a Canadian corporation that advises on and implements operational systems for complex organizations.
             </p>
             <p>
               IOA combines technical architecture, operational analysis, implementation and governance in one delivery model. Software, databases, automations and interfaces are implementation mechanisms—not the product itself.
@@ -194,8 +201,8 @@ export default function Home() {
             </p>
           </div>
           <dl className="company-facts">
-            <div><dt>Legal name</dt><dd>Integrated Operations Architecture Inc.</dd></div>
-            <div><dt>Public brand</dt><dd>IOA Corporation</dd></div>
+            <div><dt>Legal name</dt><dd>Integrated Operations Advisory Inc.</dd></div>
+            <div><dt>Public brand</dt><dd>Integrated Operations Advisory</dd></div>
             <div><dt>Operating model</dt><dd>Architecture · Implementation · Governance</dd></div>
           </dl>
         </section>
@@ -220,8 +227,8 @@ export default function Home() {
       </main>
       <footer className="site-footer">
         <div className="section-shell">
-          <span className="footer-brand">IOA Corporation</span>
-          <p>Integrated Operations Architecture Inc. · Canada</p>
+          <span className="footer-brand">IOA</span>
+          <p>Integrated Operations Advisory Inc. · Canada</p>
           <a href="#overview">Back to top ↑</a>
         </div>
       </footer>

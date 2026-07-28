@@ -14,25 +14,25 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ioacorporation.com"),
-  title: "Integrated Operations Architecture Inc. | IOA Corporation",
+  title: "Integrated Operations Advisory Inc. | IOA",
   description:
-    "IOA Corporation designs integrated operational systems, data architecture, workflows, internal tools, and governance frameworks for complex enterprise operations.",
+    "Integrated Operations Advisory designs integrated operational systems, data architecture, workflows, internal tools, and governance frameworks for complex enterprise operations.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: "/",
-    siteName: "IOA Corporation",
-    title: "Integrated systems for complex operations | IOA Corporation",
+    siteName: "Integrated Operations Advisory",
+    title: "Integrated systems for complex operations | IOA",
     description:
       "Integrated operational systems for complex enterprise operations.",
-    images: [{ url: "/og-corporate.svg", width: 1200, height: 630, alt: "IOA Corporation — Architecture for complex operations" }],
+    images: [{ url: "/og-ioa.svg", width: 1200, height: 630, alt: "IOA — Integrated Operations Advisory" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Architecture for complex operations | IOA Corporation",
+    title: "Integrated operations advisory | IOA",
     description:
       "Integrated operational systems for complex enterprise operations.",
-    images: ["/og-corporate.svg"],
+    images: ["/og-ioa.svg"],
   },
   robots: { index: true, follow: true },
 };
