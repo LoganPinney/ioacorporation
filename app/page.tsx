@@ -99,7 +99,7 @@ export default function Home() {
         </section>
 
         <div className="principles" aria-label="IOA operating model">
-          <span>Architecture</span><i aria-hidden="true" />
+          <span>System Architecture</span><i aria-hidden="true" />
           <span>Implementation</span><i aria-hidden="true" />
           <span>Governance</span>
         </div>
