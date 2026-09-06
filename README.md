@@ -1,6 +1,6 @@
 # IOA Corporation Website
 
-First-draft corporate website for IOA Corporation, built with the Next.js App Router, React, TypeScript, and Tailwind CSS.
+Corporate website for Integrated Operations Advisory Inc., built with the Next.js App Router, React, TypeScript, and Tailwind CSS. The responsive design combines an operating-model diagram, service capabilities, engagement contexts, a four-stage approach, company information, and an email introduction form.
 
 ## Run locally
 
@@ -17,6 +17,7 @@ Open `http://localhost:3000`.
 
 ```bash
 npm run lint
+npm test
 npm run build
 ```
 
@@ -28,7 +29,13 @@ When importing the repository into Vercel, select the Next.js framework preset a
 
 ## Contact form
 
-The contact form currently opens the visitor's email client with the message addressed to `hello@ioacorporation.com`. Replace that address in `app/page.tsx` when the final company inbox is ready.
+The contact form validates the introduction and opens the visitor's email client with an encoded draft addressed to `contact@ioacorporation.com`. The visitor reviews and sends it themselves. The website does not send, persist, or claim to have delivered the message. A direct email link is available if no mail client is configured.
+
+The existing address is still provisional and must be confirmed before public launch. Update it consistently in `lib/contact.ts`, `components/ContactForm.tsx`, and `app/page.tsx` when confirmed.
+
+## Private review deployment
+
+Set `IOA_STATIC_EXPORT=1` when running the build to create the `out/` directory for the private Sites preview. Normal Vercel builds retain their standard `.next` output. Existing social-preview assets and production canonical URLs are preserved.
 
 ## SEO basics
 
