@@ -1,5 +1,6 @@
 import { ContactForm } from "../components/ContactForm";
 import { Header } from "../components/Header";
+import { AnimatedFigure } from "../components/AnimatedFigure";
 
 const capabilities = [
   {
@@ -55,7 +56,7 @@ const steps = [
 
 function OperatingModel() {
   return (
-    <div className="operating-model">
+    <AnimatedFigure className="operating-model" label="Fig. 01">
       <div className="model-caption">
         <span>
           <i /> THE INTEGRATED OPERATING MODEL
@@ -91,10 +92,10 @@ function OperatingModel() {
           </pattern>
         </defs>
         <rect width="600" height="450" fill="url(#grid)" />
-        <g stroke="#81968d" strokeWidth="1" strokeDasharray="4 6">
+        <g className="model-connections" stroke="#81968d" strokeWidth="1" strokeDasharray="4 6">
           <path d="M95 119V304 M310 33V218 M505 118V303 M290 211V396" />
         </g>
-        <g>
+        <g className="model-layer model-layer-operations">
           <path
             d="M95 304 310 218 505 303 290 396Z"
             fill="#243b46"
@@ -130,7 +131,7 @@ function OperatingModel() {
             PEOPLE + WORKFLOWS
           </text>
         </g>
-        <g>
+        <g className="model-layer model-layer-information">
           <path
             d="M95 212 310 126 505 211 290 304Z"
             fill="#314b50"
@@ -166,7 +167,7 @@ function OperatingModel() {
             RECORDS + DECISIONS
           </text>
         </g>
-        <g>
+        <g className="model-layer model-layer-governance">
           <path
             d="M95 120 310 34 505 119 290 212Z"
             fill="#d6eea8"
@@ -202,7 +203,7 @@ function OperatingModel() {
             OWNERSHIP + CONTROL
           </text>
         </g>
-        <g fill="#d6eea8">
+        <g className="model-nodes" fill="#d6eea8">
           <circle cx="95" cy="120" r="4" />
           <circle cx="505" cy="119" r="4" />
           <circle cx="290" cy="396" r="4" />
@@ -218,7 +219,7 @@ function OperatingModel() {
           ↗
         </span>
       </div>
-    </div>
+    </AnimatedFigure>
   );
 }
 
@@ -376,9 +377,10 @@ export default function Home() {
             </div>
           </div>
           <div className="approach-layout">
-            <figure
+            <AnimatedFigure
+              as="figure"
+              label="Fig. 02"
               className="orchestration-diagram"
-              aria-label="Digital orchestration: incoming requests move through shared rules to people and connected systems, with a shared record and feedback loop."
             >
               <figcaption>
                 <span>DIGITAL ORCHESTRATION</span>
@@ -423,7 +425,7 @@ export default function Home() {
                   <p>Outcomes inform the next decision.</p>
                 </div>
               </div>
-            </figure>
+            </AnimatedFigure>
             <ol className="approach-list">
               {steps.map(([title, lead, copy], index) => (
                 <li key={title}>

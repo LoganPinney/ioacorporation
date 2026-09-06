@@ -1071,6 +1071,135 @@ h2 span {
   }
 }
 
+/* Figure motion shares one clock per diagram so every stage stays in sync. */
+.figure-controls {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 20px 12px;
+}
+.orchestration-diagram .figure-controls {
+  padding: 16px 0 0;
+}
+.figure-motion-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #526871;
+  background: transparent;
+  color: #d6eea8;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.figure-motion-toggle:hover {
+  background: #d6eea812;
+  border-color: #d6eea8;
+}
+.figure-motion-toggle:focus-visible {
+  outline: 2px solid #d6eea8;
+  outline-offset: 4px;
+}
+.figure-reduced-motion {
+  display: none;
+  color: #b7c5c8;
+  font-size: 12px;
+}
+.model-layer {
+  animation: model-breathe 8s ease-in-out infinite;
+}
+.model-layer-operations { --layer-lift: 5px; }
+.model-layer-information { --layer-lift: -5px; }
+.model-layer-governance { --layer-lift: -14px; }
+.model-connections {
+  animation: model-connect 8s linear infinite;
+}
+.model-layer path[stroke-dasharray] {
+  animation: model-connect 8s linear infinite;
+}
+.model-nodes {
+  animation: model-signal 8s ease-in-out infinite;
+}
+@keyframes model-breathe {
+  0%, 15%, 85%, 100% { transform: translateY(0); }
+  45%, 55% { transform: translateY(var(--layer-lift)); }
+}
+@keyframes model-connect {
+  to { stroke-dashoffset: -80; }
+}
+@keyframes model-signal {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+.flow-inputs > span,
+.flow-outputs > div,
+.flow-record {
+  animation: flow-stage 10s ease-in-out infinite;
+}
+.flow-inputs > span:nth-child(2) { animation-delay: 0.35s; }
+.flow-inputs > span:nth-child(3) { animation-delay: 0.7s; }
+.flow-outputs > div { animation-delay: 5.2s; }
+.flow-outputs > div:nth-child(2) { animation-delay: 5.6s; }
+.flow-record { animation-delay: 7.4s; }
+.flow-core {
+  position: relative;
+  overflow: hidden;
+  animation: flow-process 10s ease-in-out infinite;
+}
+.flow-core::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #405333;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: flow-progress 10s ease-in-out infinite;
+}
+.flow-arrow {
+  animation: flow-travel 10s ease-in-out infinite;
+}
+.flow-core + .flow-arrow { animation-delay: 2.8s; }
+.flow-record > span {
+  animation: flow-feedback 10s ease-in-out infinite;
+}
+@keyframes flow-stage {
+  0%, 20%, 100% { border-color: #526871; background-color: transparent; }
+  5%, 13% { border-color: #d6eea8; background-color: #d6eea812; }
+}
+@keyframes flow-process {
+  0%, 20%, 53%, 100% { box-shadow: 0 0 0 0 #d6eea800; }
+  30%, 43% { box-shadow: 0 0 0 5px #d6eea826; }
+}
+@keyframes flow-progress {
+  0%, 23% { transform: scaleX(0); opacity: 1; }
+  46%, 50% { transform: scaleX(1); opacity: 1; }
+  55%, 100% { transform: scaleX(1); opacity: 0; }
+}
+@keyframes flow-travel {
+  0%, 14%, 33%, 100% { transform: translateY(0); opacity: 0.45; }
+  19% { transform: translateY(-4px); opacity: 1; }
+  28% { transform: translateY(4px); opacity: 1; }
+}
+@keyframes flow-feedback {
+  0%, 77% { transform: rotate(0); }
+  92%, 100% { transform: rotate(360deg); }
+}
+/* Static content remains readable before hydration and while motion is paused. */
+.animated-figure:not([data-visible="true"]) *,
+.animated-figure:not([data-visible="true"]) *::after,
+.animated-figure[data-paused="true"] *,
+.animated-figure[data-paused="true"] *::after {
+  animation-play-state: paused !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .figure-motion-toggle { display: none; }
+  .figure-reduced-motion { display: inline; }
+}
+
 /* Digital orchestration diagram and reading sizes. */
 .orchestration-diagram {
   background: var(--navy);
