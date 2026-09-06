@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Source_Serif_4 } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -7,16 +7,11 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const sourceSerif = Source_Serif_4({
-  variable: "--font-source-serif",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://ioacorporation.com"),
   title: "Integrated Operations Advisory Inc. | IOA",
   description:
-    "Integrated Operations Advisory designs integrated operational systems, data architecture, workflows, internal tools, and governance frameworks for complex enterprise operations.",
+    "Integrated Operations Advisory designs digital orchestration systems, data architecture, connected workflows, internal tools and governance for complex operations.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -25,7 +20,14 @@ export const metadata: Metadata = {
     title: "Integrated systems for complex operations | IOA",
     description:
       "Integrated operational systems for complex enterprise operations.",
-    images: [{ url: "/og-ioa.svg", width: 1200, height: 630, alt: "IOA — Integrated Operations Advisory" }],
+    images: [
+      {
+        url: "/og-ioa.svg",
+        width: 1200,
+        height: 630,
+        alt: "IOA — Integrated Operations Advisory",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -38,13 +40,15 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f3f0e8",
+  themeColor: "#112731",
   colorScheme: "light",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-CA" className={`${geistSans.variable} ${sourceSerif.variable}`}>
+    <html lang="en-CA" className={geistSans.variable}>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
