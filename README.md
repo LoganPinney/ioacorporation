@@ -31,7 +31,7 @@ When importing the repository into Vercel, select the Next.js framework preset a
 
 The contact form validates the introduction and opens the visitor's email client with an encoded draft addressed to `contact@ioacorporation.com`. The visitor reviews and sends it themselves. The website does not send, persist, or claim to have delivered the message. A direct email link is available if no mail client is configured.
 
-The existing address is still provisional and must be confirmed before public launch. Update it consistently in `lib/contact.ts`, `components/ContactForm.tsx`, and `app/page.tsx` when confirmed.
+The confirmed public contact address is `contact@ioacorporation.com`. Keep it consistent in `lib/contact.ts`, `components/ContactForm.tsx`, and `app/page.tsx` if it changes in the future.
 
 ## Private review deployment
 
