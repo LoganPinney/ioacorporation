@@ -10,6 +10,8 @@ export function Header() {
   const navItems = [
     ["Capabilities", "#capabilities"],
     ["Approach", "#approach"],
+    ["Systems", "#enterprise-systems"],
+    ["Start here", "#first-engagement"],
     ["Company", "#company"],
   ];
 
@@ -37,7 +39,7 @@ export function Header() {
           onKeyDown={(event) => {
             if (event.key === "Escape") {
               closeMenu();
-              menuRef.current?.querySelector("summary")?.focus();
+              menuRef.current?.querySelector("summary")?.focus({ preventScroll: true });
             }
           }}
         >

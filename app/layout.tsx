@@ -1,10 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
+const geistSans = localFont({
+  src: "../public/fonts/geist-latin.woff2",
+  weight: "100 900",
+  style: "normal",
+  display: "swap",
   variable: "--font-geist-sans",
-  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -22,9 +25,10 @@ export const metadata: Metadata = {
       "Integrated operational systems for complex enterprise operations.",
     images: [
       {
-        url: "/og-ioa.svg",
+        url: "/og-ioa.png",
         width: 1200,
         height: 630,
+        type: "image/png",
         alt: "IOA — Integrated Operations Advisory",
       },
     ],
@@ -34,7 +38,7 @@ export const metadata: Metadata = {
     title: "Integrated operations advisory | IOA",
     description:
       "Integrated operational systems for complex enterprise operations.",
-    images: ["/og-ioa.svg"],
+    images: ["/og-ioa.png"],
   },
   robots: { index: true, follow: true },
 };

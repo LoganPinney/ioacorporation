@@ -1,6 +1,8 @@
-import { ContactForm } from "../components/ContactForm";
+import { ContactPanel } from "../components/ContactPanel";
+import { CONTACT_EMAIL, CONTACT_HREF } from "../lib/company";
 import { Header } from "../components/Header";
 import { AnimatedFigure } from "../components/AnimatedFigure";
+import { EnterpriseSystems } from "../components/EnterpriseSystems";
 
 const capabilities = [
   {
@@ -248,9 +250,8 @@ export default function Home() {
               <span>operations.</span>
             </h1>
             <p className="hero-intro">
-              We design digital orchestration systems that connect people, data
-              and workflows, helping organizations coordinate work and control
-              risk.
+              We connect people, data and workflows so approvals move, records
+              stay consistent and teams know who owns the next step.
             </p>
             <a className="button button-primary" href="#contact">
               Discuss an engagement <span aria-hidden="true">↗</span>
@@ -334,24 +335,24 @@ export default function Home() {
                 <span className="small-index">01 — COORDINATION</span>
                 <h3>Complex operations</h3>
                 <p>
-                  Multi-team, multi-region and high-consequence work that has
-                  outgrown informal coordination.
+                  Approvals stall between teams, handoffs depend on a few
+                  people, and no one has a clear view of what happens next.
                 </p>
               </article>
               <article>
                 <span className="small-index">02 — CHANGE</span>
                 <h3>Operational transformation</h3>
                 <p>
-                  New systems, clearer accountability and a controlled
-                  transition from legacy processes.
+                  Duplicate records, disconnected tools and manual reporting
+                  make it difficult to introduce a new system or way of working.
                 </p>
               </article>
               <article>
                 <span className="small-index">03 — DELIVERY</span>
                 <h3>Enterprise implementation</h3>
                 <p>
-                  Architecture carried through to working tools, connected
-                  systems, governance and adoption.
+                  A new tool needs more than configuration: clear ownership,
+                  connected workflows, exception handling and team adoption.
                 </p>
               </article>
             </div>
@@ -441,12 +442,69 @@ export default function Home() {
             </ol>
           </div>
         </section>
+        <EnterpriseSystems />
+        <section
+          className="first-engagement section-shell section-space"
+          id="first-engagement"
+          aria-labelledby="first-engagement-heading"
+        >
+          <div className="section-intro">
+            <p className="section-label">START HERE / INITIAL ENGAGEMENT</p>
+            <div>
+              <h2 id="first-engagement-heading">
+                Start with one operation.<br /><span>Leave with a clear plan.</span>
+              </h2>
+              <p>
+                Begin with an operational diagnostic focused on one workflow,
+                team or coordination problem. Agree the scope, deliverables,
+                timing and fees before work begins.
+              </p>
+            </div>
+          </div>
+          <div className="diagnostic-grid">
+            <article>
+              <span className="small-index">01 / FOCUS</span>
+              <h3>Understand the real work</h3>
+              <p>
+                Review how requests, information and decisions move through the
+                operation. Identify delays, duplicate effort and unclear ownership.
+              </p>
+            </article>
+            <article>
+              <span className="small-index">02 / DELIVERABLES</span>
+              <h3>A practical decision package</h3>
+              <ul>
+                <li>A map of the current workflow and responsibilities</li>
+                <li>A prioritized view of gaps, dependencies and risks</li>
+                <li>A proposed operating model and implementation roadmap</li>
+              </ul>
+            </article>
+            <article>
+              <span className="small-index">03 / YOUR INVOLVEMENT</span>
+              <h3>Built with your team</h3>
+              <p>
+                Nominate an operational lead, involve the people who do the work,
+                and share relevant process documents or sample records where appropriate.
+              </p>
+            </article>
+          </div>
+          <div className="diagnostic-next">
+            <p>
+              <strong>Decide what comes next.</strong> Review the findings together,
+              then choose whether your team implements the plan or scopes further
+              delivery with IOA. Implementation is a separate decision.
+            </p>
+            <a className="button button-primary" href="#contact">
+              Discuss a diagnostic <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
         <section
           className="outcomes section-shell"
           aria-labelledby="outcomes-heading"
         >
           <div>
-            <p className="section-label">THE RESULT</p>
+            <p className="section-label">DESIGN OBJECTIVES</p>
             <h2 id="outcomes-heading">
               Clarity that holds
               <br />
@@ -496,9 +554,10 @@ export default function Home() {
                 serves the wider operation.
               </p>
               <p className="confidentiality">
-                <span aria-hidden="true">↳</span> Client work is frequently
-                confidential. We describe our capabilities while protecting the
-                operations, systems and information entrusted to us.
+                <span aria-hidden="true">↳</span> Selected engagements and
+                implementation details are confidential. We describe our
+                capabilities and methodology while protecting the operations,
+                systems and information entrusted to us.
               </p>
             </div>
           </div>
@@ -527,13 +586,12 @@ export default function Home() {
               </p>
               <div className="contact-note">
                 <span>CORPORATE CONTACT</span>
-                <a href="mailto:contact@ioacorporation.com">
-                  contact@ioacorporation.com ↗
+                <a href={CONTACT_HREF}>
+                  {CONTACT_EMAIL} ↗
                 </a>
-                <small>Address awaiting final confirmation.</small>
               </div>
             </div>
-            <ContactForm />
+            <ContactPanel />
           </div>
         </section>
       </main>
@@ -572,6 +630,7 @@ export default function Home() {
             name: "Integrated Operations Advisory Inc.",
             alternateName: "Integrated Operations Advisory",
             url: "https://ioacorporation.com",
+            email: CONTACT_EMAIL,
             areaServed: "Canada",
             description:
               "Integrated operational systems, data architecture and governance for complex organizations.",
