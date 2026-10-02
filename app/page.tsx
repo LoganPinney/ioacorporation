@@ -545,13 +545,15 @@ export default function Home() {
             <div className="company-copy">
               <p>
                 Integrated Operations Advisory Inc. is a Canadian corporation
-                that advises on and implements operational systems for complex
+                that designs and implements operational systems for complex
                 organizations.
               </p>
               <p>
-                We bring technical architecture, operational analysis,
-                implementation and governance together. Every tool and workflow
-                serves the wider operation.
+                We combine technical systems architecture and operational
+                architecture in one delivery model, from requirements and
+                workflow design through implementation, governance and ongoing
+                execution. Every tool, integration and workflow serves the wider
+                operation.
               </p>
               <p className="confidentiality">
                 <span aria-hidden="true">↳</span> Selected engagements and
@@ -559,6 +561,69 @@ export default function Home() {
                 capabilities and methodology while protecting the operations,
                 systems and information entrusted to us.
               </p>
+            </div>
+          </div>
+          <div className="practitioners">
+            <p className="section-label">DELIVERY CAPABILITY / PRACTITIONERS</p>
+            <div className="practitioner-grid">
+              <article
+                className="practitioner-profile"
+                aria-labelledby="logan-heading"
+              >
+                <div className="practitioner-identity">
+                  <h3 id="logan-heading">Logan Pinney</h3>
+                  <p>Systems architecture & technical delivery</p>
+                </div>
+                <div className="practitioner-copy">
+                  <p>
+                    Logan Pinney works across operational systems architecture,
+                    data governance and technical delivery. He translates
+                    operational requirements into data models, controlled
+                    workflows, automations and application features. His
+                    experience includes connecting structured data systems,
+                    document processes, web applications and external APIs, with
+                    particular attention to validation, auditability and
+                    exception handling.
+                  </p>
+                  <p>
+                    He carries system design through implementation, testing,
+                    rollout and production support while coordinating
+                    operational, technical and vendor dependencies.
+                    His approach emphasizes authoritative records, proportionate
+                    architecture and maintainable systems that remain practical for
+                    the people operating them.
+                  </p>
+                </div>
+              </article>
+              <article
+                className="practitioner-profile"
+                aria-labelledby="veronica-heading"
+              >
+                <div className="practitioner-identity">
+                  <h3 id="veronica-heading">Veronica Fine</h3>
+                  <p>Operational architecture & implementation</p>
+                </div>
+                <div className="practitioner-copy">
+                  <p>
+                    Veronica Fine works across operational architecture, process
+                    design and implementation. She translates complex
+                    requirements into repeatable workflows, clear responsibilities
+                    and review controls. Her experience includes structured
+                    intake, record routing, status tracking and automated
+                    communications in high-volume international operations
+                    involving regulatory requirements, specialist review,
+                    external vendors, financial dependencies and fixed deadlines.
+                  </p>
+                  <p>
+                    She carries the operating model into execution by aligning
+                    stakeholders, coordinating workstreams
+                    and establishing governance around how work is performed.
+                    Her focus is ensuring system and workflow design remains
+                    aligned with organizational readiness, operational standards
+                    and the dependencies required for reliable execution.
+                  </p>
+                </div>
+              </article>
             </div>
           </div>
           <div className="company-facts">

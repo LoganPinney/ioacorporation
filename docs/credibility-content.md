@@ -4,7 +4,8 @@ This release establishes IOA's credibility through positioning, methodology, cap
 
 ## Current release
 
-- Omit individual practitioner profiles unless all statements use verified public information and publication is approved.
+- Publish individual practitioner profiles only from verified, publication-authorized information. Keep each profile around 80–120 words, subordinate to IOA's corporate positioning, and focused on responsibility, capability, operational complexity and contribution to engagements.
+- Use demonstrated capabilities in the supplied practitioner evidence. Do not promote inferred capabilities or unestablished qualifications, authority or management responsibilities into public claims. Present complementary delivery responsibilities without suggesting a larger workforce or publishing ownership details.
 - Do not publish client identities, testimonials, logos, statistics, project details, demonstrations or case studies without explicit authorization.
 - Do not create fake, inferred, illustrative or placeholder client evidence.
 - Describe operational architecture, workflow engineering, systems integration, internal tools, automation, governance, data architecture and decision systems at a capability level.
